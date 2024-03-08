@@ -193,13 +193,13 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .counter button:first-child:before {
-  -webkit-mask: url("/img/minus.svg") no-repeat 50% 50%;
-  mask: url("/img/minus.svg") no-repeat 50% 50%;
+  -webkit-mask: url(/img/minus.svg) no-repeat 50% 50%;
+  mask: url(/img/minus.svg) no-repeat 50% 50%;
 }
 
 .counter button:last-child:before {
-  -webkit-mask: url("/img/plus.svg") no-repeat 50% 50%;
-  mask: url("/img/plus.svg") no-repeat 50% 50%;
+  -webkit-mask: url(/img/plus.svg) no-repeat 50% 50%;
+  mask: url(/img/plus.svg) no-repeat 50% 50%;
 }
 
 .counter button:hover::before {
@@ -235,7 +235,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .quick-modal-dots li.slick-active button {
-  background-image: url("/img/white-ellipse.svg") !important;
+  background-image: url(/img/white-ellipse.svg) !important;
 }
 
 @media (max-width: 1460px) {
