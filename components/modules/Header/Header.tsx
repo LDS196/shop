@@ -3,16 +3,25 @@ import { useLang } from '@/hooks/useLang'
 import Logo from '@/components/elements/Logo/Logo'
 import Link from 'next/link'
 import Menu from '@/components/modules/Header/Menu'
-import { openMenu } from '@/context/modals'
+import { $searchModal, openMenu, openSearchModal } from '@/context/modals'
 import { addOverflowHiddenToBody } from '@/lib/utils/common'
+import { useUnit } from 'effector-react'
+import CartPopup from '@/components/modules/Header/CartPopup/CartPopup'
 
 const Header = () => {
   const { lang, translations } = useLang()
+  const searchModal = useUnit($searchModal)
 
   const handleOpenMenu = () => {
     addOverflowHiddenToBody()
     openMenu()
   }
+
+  const handleOpenSearchModal = () => {
+    openSearchModal()
+    addOverflowHiddenToBody()
+  }
+
   return (
     <header className="header">
       <div className="container header__container">
@@ -25,7 +34,10 @@ const Header = () => {
         </div>
         <ul className="header__links list-reset">
           <li className="header__links__item">
-            <button className="btn-reset header__links__item__btn header__links__item__btn--search" />
+            <button
+              className="btn-reset header__links__item__btn header__links__item__btn--search"
+              onClick={handleOpenSearchModal}
+            />
           </li>
           <li className="header__links__item">
             <Link
@@ -40,10 +52,7 @@ const Header = () => {
             />
           </li>
           <li className="header__links__item">
-            <Link
-              className="header__links__item__btn header__links__item__btn--cart"
-              href="/cart"
-            />
+            <CartPopup />
           </li>
           <li className="header__links__item header__links__item--profile">
             <button className="btn-reset header__links__item__btn header__links__item__btn--profile" />
