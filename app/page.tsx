@@ -1,7 +1,5 @@
+import MainPage from '@/components/templates/MainPage/MainPage'
+
 export default function Home() {
-  return (
-    <main>
-      <div>sdsds</div>
-    </main>
-  )
+  return <MainPage />
 }
