@@ -70,6 +70,12 @@ const PagesLayout = ({ children }: { children: React.ReactNode }) => {
                 }`}
                 onClick={handleCloseAuthPopup}
               />
+              <div
+                className={`auth-overlay ${
+                  openAuthPopup ? 'overlay-active' : ''
+                }`}
+                onClick={handleCloseAuthPopup}
+              />
               {cookieAlertOpen && (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.5 }}

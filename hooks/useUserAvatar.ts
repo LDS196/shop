@@ -1,5 +1,5 @@
 import { useUnit } from 'effector-react'
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { $user } from '@/context/user'
 
 export const useUserAvatar = () => {
@@ -14,7 +14,7 @@ export const useUserAvatar = () => {
 
     const oauthAvatar = JSON.parse(
       localStorage.getItem(
-        '@@earthoOnespajs@@::l3Q4jO58IChQRwUkzkHI::default::undefined'
+        '@@earthoOnespajs@@::RKOudBAaZ2EOIHwBpMRZ::default::undefined'
       ) as string
     )
 
