@@ -15,7 +15,7 @@ const AddToCartBtn = ({
     onClick={handleAddToCart}
   >
     {addToCartSpinner ? (
-      <FontAwesomeIcon icon={faSpinner} spin color='#fff' />
+      <FontAwesomeIcon icon={faSpinner} spin color="#fff" />
     ) : (
       text
     )}
