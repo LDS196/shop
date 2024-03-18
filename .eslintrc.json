@@ -1,6 +1,8 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint/eslint-plugin"],
+  "plugins": [
+    "@typescript-eslint/eslint-plugin"
+  ],
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
@@ -36,7 +38,10 @@
         "maxBOF": 1
       }
     ],
-    "object-curly-spacing": ["error", "always"],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
     "comma-spacing": [
       2,
       {
@@ -65,23 +70,42 @@
         "after": true
       }
     ],
+    "indent": [
+      "error",
+      2,
+      {
+        "ignoredNodes": [
+          "JSXElement"
+        ]
+      }
+    ],
     "react/jsx-indent": [
       "error",
       2,
       {
-        "indentLogicalExpressions": true
+        "ignoredNodes": [
+          "JSXElement"
+        ]
       }
     ],
-    "arrow-body-style": ["error", "as-needed"],
-    "padded-blocks": ["error", "never"],
-    "semi": ["error", "never"],
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
+    "padded-blocks": [
+      "error",
+      "never"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
     "max-len": [
       "error",
       {
         "code": 120
       }
     ],
-    "indent": ["error", 2],
     "react/self-closing-comp": [
       "error",
       {
