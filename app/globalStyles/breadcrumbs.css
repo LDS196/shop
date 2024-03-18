@@ -16,11 +16,11 @@
 
 .breadcrumbs__item__link {
   position: relative;
-  color: rgba(255, 255, 255, 0.90);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
-  transition: color .2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .breadcrumbs__item__link::before {
@@ -39,14 +39,14 @@
 }
 
 .breadcrumbs__item__link:hover {
-  color: #9466FF;
-  transition: color .2s ease-in-out;
+  color: #9466ff;
+  transition: color 0.2s ease-in-out;
 }
 
 .last-crumb {
-  color: rgba(255, 255, 255, 0.40);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .last-crumb:hover {
-  color: rgba(255, 255, 255, 0.40);
+  color: rgba(255, 255, 255, 0.4);
 }

@@ -35,7 +35,10 @@ const Accordion = ({
               collapsed: { opacity: 0, height: 0 },
             }}
             style={{ overflow: 'hidden' }}
-            transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+            transition={{
+              duration: 0.8,
+              ease: [0.04, 0.62, 0.23, 0.98],
+            }}
           >
             {children}
           </motion.div>

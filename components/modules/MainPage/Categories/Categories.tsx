@@ -19,7 +19,11 @@ const Categories = () => {
   const imgSpinnerClass = imgSpinner ? styles.img_loading : ''
 
   const images = [
-    { src: img1, id: 1, title: translations[lang].main_page.category_cloth },
+    {
+      src: img1,
+      id: 1,
+      title: translations[lang].main_page.category_cloth,
+    },
     {
       src: img2,
       id: 2,
@@ -30,7 +34,11 @@ const Categories = () => {
       id: 3,
       title: translations[lang].main_page.category_souvenirs,
     },
-    { src: img4, id: 4, title: translations[lang].main_page.category_office },
+    {
+      src: img4,
+      id: 4,
+      title: translations[lang].main_page.category_office,
+    },
   ]
 
   return (

@@ -30,7 +30,7 @@
     z-index: -1;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #242C39;
+    color: #242c39;
     font-size: 376px;
     font-weight: 700;
 
@@ -111,7 +111,7 @@
 
     span {
       display: block;
-      color: #F1F3F5;
+      color: #f1f3f5;
       text-align: center;
       font-size: 42px;
       font-weight: 700;
@@ -134,7 +134,7 @@
 
   &__subtitle {
     margin-bottom: 20px;
-    color: #E8E9EA;
+    color: #e8e9ea;
     font-size: 22px;
     font-weight: 700;
     text-align: center;
@@ -158,7 +158,7 @@
     margin-bottom: 64px;
     max-width: 360px;
     text-align: center;
-    color: #E8E9EA;
+    color: #e8e9ea;
     line-height: 24px;
 
     @media (max-width: 1370px) {
@@ -187,7 +187,7 @@
     a {
       text-decoration: none;
       border-radius: 50px;
-      color: #F1F3F5;
+      color: #f1f3f5;
       font-weight: 500;
       padding: 12px 35px;
 
@@ -202,9 +202,9 @@
     }
 
     a:first-child {
-      background-color: #9466FF;
+      background-color: #9466ff;
       margin-right: 20px;
-      transition: background-color .2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
 
       @media (max-width: 500px) {
         margin-right: 0;
@@ -212,17 +212,17 @@
       }
 
       &:hover {
-        transition: background-color .2s ease-in-out;
+        transition: background-color 0.2s ease-in-out;
         background-color: #70f;
       }
     }
 
     a:last-child {
-      border: 2px solid #9466FF;
+      border: 2px solid #9466ff;
 
       &:hover {
-        transition: background-color .2s ease-in-out;
-        background-color: #9466FF;
+        transition: background-color 0.2s ease-in-out;
+        background-color: #9466ff;
       }
     }
   }

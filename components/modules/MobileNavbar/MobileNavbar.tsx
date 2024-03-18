@@ -8,10 +8,10 @@ import {
 } from '@/context/modals'
 import { useLang } from '@/hooks/useLang'
 import { addOverflowHiddenToBody } from '@/lib/utils/common'
+import CatalogMenu from '../Header/CatalogMenu'
 import { $cart, $cartFromLs } from '@/context/cart'
 import { useGoodsByAuth } from '@/hooks/useGoodsByAuth'
 import { $favorites, $favoritesFromLS } from '@/context/favorites'
-import CatalogMenu from '@/components/modules/Header/CatalogMenu'
 
 const MobileNavbar = () => {
   const { lang, translations } = useLang()
@@ -25,7 +25,7 @@ const MobileNavbar = () => {
   }
 
   const handleOpenCatalogMenu = () => {
-    addOverflowHiddenToBody('10')
+    addOverflowHiddenToBody('0')
     openCatalogMenu()
     closeMenu()
   }

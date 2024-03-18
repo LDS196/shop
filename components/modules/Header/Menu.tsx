@@ -1,36 +1,28 @@
-import React, { useState } from 'react'
-import { useLang } from '@/hooks/useLang'
-import { useUnit } from 'effector-react/compat'
-import { $menuIsOpen, closeMenu } from '@/context/modals'
-import { removeOverflowHiddenFromBody } from '@/lib/utils/common'
-import { AllowedLangs } from '@/constans/lang'
-import { setLang } from '@/context/lang'
-import { useMediaQuery } from '@/hooks/useMediaQuery'
-import Logo from '@/components/elements/Logo/Logo'
-import Accordion from '@/components/modules/Accordion/Accordion'
+/* eslint-disable @next/next/no-img-element */
+import { useUnit } from 'effector-react'
 import { AnimatePresence, motion } from 'framer-motion'
-import MenuLinkItem from '@/components/modules/Header/MenuLinkItem'
+import { useState } from 'react'
+import Logo from '@/components/elements/Logo/Logo'
+import { setLang } from '@/context/lang'
+import { $menuIsOpen, closeMenu } from '@/context/modals'
+import { useLang } from '@/hooks/useLang'
+import { removeOverflowHiddenFromBody } from '@/lib/utils/common'
+import Accordion from '../Accordion/Accordion'
 import { usePathname } from 'next/navigation'
-import BuyersListItems from '@/components/modules/Header/BuyersListItems'
-import ContactsListItems from '@/components/modules/Header/ContactsListItems'
+import MenuLinkItem from './MenuLinkItem'
+import { useMediaQuery } from '@/hooks/useMediaQuery'
+import BuyersListItems from './BuyersListItems'
+import ContactsListItems from './ContactsListItems'
+import { AllowedLangs } from '@/constans/lang'
 
 const Menu = () => {
-  const menuIsOpen = useUnit($menuIsOpen)
   const [activeListId, setActiveListId] = useState(0)
-
-  const handleShowCatalogList = () => setActiveListId(1)
-  const handleShowBuyersList = () => setActiveListId(2)
-  const handleShowContactsList = () => setActiveListId(3)
-
-  const pathname = usePathname()
+  const menuIsOpen = useUnit($menuIsOpen)
   const { lang, translations } = useLang()
+  const pathname = usePathname()
   const isMedia800 = useMediaQuery(800)
   const isMedia640 = useMediaQuery(640)
 
-  const handleCloseMenu = () => {
-    removeOverflowHiddenFromBody()
-    closeMenu()
-  }
   const handleSwitchLang = (lang: string) => {
     setLang(lang as AllowedLangs)
     localStorage.setItem('lang', JSON.stringify(lang))
@@ -38,6 +30,16 @@ const Menu = () => {
 
   const handleSwitchLangToRu = () => handleSwitchLang('ru')
   const handleSwitchLangToEn = () => handleSwitchLang('en')
+
+  const handleShowCatalogList = () => setActiveListId(1)
+  const handleShowBuyersList = () => setActiveListId(2)
+  const handleShowContactsList = () => setActiveListId(3)
+
+  const handleCloseMenu = () => {
+    removeOverflowHiddenFromBody()
+    closeMenu()
+    setActiveListId(0)
+  }
 
   const handleRedirectToCatalog = (path: string) => {
     if (pathname.includes('/catalog')) {
@@ -114,6 +116,7 @@ const Menu = () => {
       href: '/catalog/office?offset=0&type=pen',
     },
   ]
+
   return (
     <nav className={`nav-menu ${menuIsOpen ? 'open' : 'close'}`}>
       <div className="container nav-menu__container">

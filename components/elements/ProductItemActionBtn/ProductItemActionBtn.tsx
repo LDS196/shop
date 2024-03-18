@@ -36,7 +36,7 @@ const ProductItemActionBtn = ({
         onMouseLeave={hideTooltip}
         style={{ marginBottom: marginBottom || 16 }}
       >
-        {spinner && <FontAwesomeIcon icon={faSpinner} spin color='#fff' />}
+        {spinner && <FontAwesomeIcon icon={faSpinner} spin color="#fff" />}
       </button>
       {withTooltip && (
         <AnimatePresence>

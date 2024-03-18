@@ -3,7 +3,11 @@ import toast from 'react-hot-toast'
 import { ICartItem } from '@/types/cart'
 import { IProduct } from '@/types/common'
 import { handleShowSizeTable, idGenerator, isUserAuth } from './common'
-import { addProductToCart, setCartFromLS, setShouldShowEmpty } from '@/context/cart'
+import {
+  addProductToCart,
+  setCartFromLS,
+  setShouldShowEmpty,
+} from '@/context/cart'
 import { productsWithoutSizes } from '@/constans/product'
 
 export const addItemToCart = (

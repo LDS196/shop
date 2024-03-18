@@ -8,7 +8,10 @@ import {
   $showSizeTable,
   closeQuickViewModal,
 } from '@/context/modals'
-import Layout from './Layout'
+
+import { motion } from 'framer-motion'
+import CookieAlert from '../modules/CookieAlert/CookieAlert'
+import Layout from '@/components/layouts/Layout'
 import {
   closeSizeTableByCheck,
   handleCloseAuthPopup,
@@ -16,8 +19,6 @@ import {
 } from '@/lib/utils/common'
 import { $openAuthPopup } from '@/context/auth'
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
-import CookieAlert from '../modules/CookieAlert/CookieAlert'
 
 const PagesLayout = ({ children }: { children: React.ReactNode }) => {
   const [isClient, setIsClient] = useState(false)
@@ -63,12 +64,6 @@ const PagesLayout = ({ children }: { children: React.ReactNode }) => {
                   showSizeTable ? 'overlay-active' : ''
                 }`}
                 onClick={handleCloseSizeTable}
-              />
-              <div
-                className={`auth-overlay ${
-                  openAuthPopup ? 'overlay-active' : ''
-                }`}
-                onClick={handleCloseAuthPopup}
               />
               <div
                 className={`auth-overlay ${

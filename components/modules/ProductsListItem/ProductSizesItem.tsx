@@ -31,7 +31,7 @@ const ProductSizesItem = ({
         products={currentCartItems}
         withCartIcon={false}
       />
-      <button className='btn-reset' onClick={handleSelectSize}>
+      <button className="btn-reset" onClick={handleSelectSize}>
         {currentSize[0].toLocaleUpperCase()}
       </button>
     </li>

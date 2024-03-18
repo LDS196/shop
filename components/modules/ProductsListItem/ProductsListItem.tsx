@@ -6,8 +6,13 @@ import Image from 'next/image'
 import { useLang } from '@/hooks/useLang'
 import { IProductsListItemProps } from '@/types/modules'
 import ProductSubtitle from '@/components/elements/ProductSubtitle/ProductSubtitle'
-import { addOverflowHiddenToBody, formatPrice, isItemInList } from '@/lib/utils/common'
+import {
+  addOverflowHiddenToBody,
+  formatPrice,
+  isItemInList,
+} from '@/lib/utils/common'
 import ProductLabel from './ProductLabel'
+import ProductItemActionBtn from '@/components/elements/ProductItemActionBtn/ProductItemActionBtn'
 import ProductAvailable from '@/components/elements/ProductAvailable/ProductAvailable'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { showQuickViewModal } from '@/context/modals'
@@ -18,7 +23,6 @@ import { setIsAddToFavorites } from '@/context/favorites'
 import { useFavoritesAction } from '@/hooks/useFavoritesAction'
 import styles from '@/styles/product-list-item/index.module.scss'
 import stylesForAd from '@/styles/ad/index.module.scss'
-import ProductItemActionBtn from '@/components/elements/ProductItemActionBtn/ProductItemActionBtn'
 import { productsWithoutSizes } from '@/constans/product'
 
 const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
